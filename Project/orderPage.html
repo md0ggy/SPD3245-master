@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital</title>
+<link href="css/project.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function setlogindiv(){
+if(localStorage.getItem("user")){
+  document.getElementById("log").style.display = "none";
+ }
+}
+function logincheck(){
+  if(!localStorage.getItem("user")){
+    window.alert("Please Login First!");
+    window.location.assign("login.html");
+   }
+}
+</script>
+<title>Order Page</title>
+</head>
+<body onload="setlogindiv();logincheck();">
+<div id="backgroundImage">
+  <div>
+    <img src="img/banner.jpg" width="100%">
+  </div>
+  <nav class="[ navbar ][ navbar-bootsnipp animate ]" role="navigation">
+      	<div class="container" style="background-color:white;">
+  			<!-- Brand and toggle get grouped for better mobile display -->
+  			<div class="[ navbar-header ]">
+  				<button type="button" class="[ navbar-toggle ]" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+  					<span class="[ sr-only ]">Toggle navigation</span>
+  					<span class="[ icon-bar ]"></span>
+  					<span class="[ icon-bar ]"></span>
+  					<span class="[ icon-bar ]"></span>
+  				</button>
+  				<div class="[ animbrand ]">
+  					<a class="[ navbar-brand ][ animate ]" href="index.html">Hospital_logo</a>
+  				</div>
+  			</div>
+
+  			<!-- Collect the nav links, forms, and other content for toggling -->
+  			<div class="[ collapse navbar-collapse ]" id="bs-example-navbar-collapse-1">
+  				<ul class="[ nav navbar-nav navbar-right ]">
+  					<li class="[ visible-xs ]">
+  						<form action="http://bootsnipp.com/search" method="GET" role="search">
+  							<div class="[ input-group ]">
+  								<input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets">
+  								<span class="[ input-group-btn ]">
+  									<button class="[ btn btn-primary ]" type="submit"><span class="[ glyphicon glyphicon-search ]"></span></button>
+  									<button class="[ btn btn-danger ]" type="reset"><span class="[ glyphicon glyphicon-remove ]"></span></button>
+  								</span>
+  							</div>
+  						</form>
+  					</li>
+  					<li><a href="#" class="[ animate ]">About</a></li>
+  					<li>
+  						<a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Room Service <span class="[ caret ]"></span></a>
+  						<ul class="[ dropdown-menu ]" role="menu">
+  							<li><a href="#" class="[ animate ]">Order Service <span class="[ pull-right glyphicon glyphicon-pencil ]"></span></a></li>
+  							<li><a href="#" class="[ animate ]">Service List <span class="[ pull-right glyphicon glyphicon-align-justify ]"></span></a></li>
+
+  						</ul>
+  					</li>
+  					<li class="[ dropdown ]">
+  						<a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Food Order <span class="[ caret ]"></span></a>
+  						<ul class="[ dropdown-menu ]" role="menu">
+  							<li><a href="#" class="[ animate ]">Food Menu</a></li>
+  							<li><a href="OrderPage.html" class="[ animate ]">Order</a></li>
+                	<li><a href="#" class="[ animate ]">Check Status</a></li>
+  						</ul>
+  					</li>
+            <li><a class="animate" href="#">Checkout</a></li>
+  					<li><a class="animate" href="login.html" id="log">Login</a></li>
+                      <li class="[ hidden-xs ]"><a href="#toggle-search" class="[ animate ]"><span class="[ glyphicon glyphicon-search ]"></span></a></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</nav>
+   <div class="container">
+    <div class="list-group col-md-4" style="width:15%; margin: 0;">
+       <a href="#" class="list-group-item active"><i class="fa fa-key"></i> <span>App Settings</span></a>
+       <a href="#" class="list-group-item"><i class="fa fa-credit-card"></i> <span>Billing</span></a>
+       <a href="#" class="list-group-item"><i class="fa fa-question-circle"></i> <span>Support</span></a>
+       <a href="#" class="list-group-item"><i class="fa fa-arrow-circle-o-left"></i> <span>Sandbox Account</span></a>
+       <a href="#" class="list-group-item"><i class="fa fa-book"></i> <span>QuickStart Overview</span></a>
+       <a href="#" class="list-group-item"><i class="fa fa-compass"></i> <span>Documentation</span></a>
+     </div>
+
+	<div class="tableForm"><!--Food Order-->
+		<table id="ordertable">
+			<caption id="caption">Order Meal</caption>
+			<tr>
+				<td>Dish ID 101</td>
+				<td rowspan="3">
+					<label for="numinput">Number Of Order</label>
+					<input type="number" name="number" value="0" style="width: 3em"/>
+				</td>
+				<td>Dish ID 102</td>
+				<td rowspan="3">
+					<label for="numinput">Number Of Order</label>
+					<input type="number" name="number" value="0" style="width: 3em"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="foodImg" src="img/food/food1.jpg" alt="food1">
+					<br/><br/>
+					<p class="tableText">Porridge with egg salad and tea</p>
+				<td>
+					<img class="foodImg" src="img/food/food2.jpg" alt="food2">
+					<br/><br/>
+					<p class="tableText">Omelette with bread and fruit</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="tableText">Price : $30</p>
+				</td>
+				<td>
+					<p class="tableText">Price : $35</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Dish ID 103</td>
+				<td rowspan="3">
+					<label for="numinput">Number Of Order</label>
+					<input type="number" name="number" value="0" style="width: 3em"/>
+				</td>
+				<td>Dish ID 104</td>
+				<td rowspan="3">
+					<label for="numinput">Number Of Order</label>
+					<input type="number" name="number" value="0" style="width: 3em"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="foodImg" src="img/food/food3.jpg" alt="food1">
+					<br/><br/>
+					<p class="tableText">Fish with vegatable and soda pop</p>
+				<td>
+					<img class="foodImg" src="img/food/food4.jpg" alt="food2">
+					<br/><br/>
+					<p class="tableText">Chicken breast with rice and red bean</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="tableText">Price : $28</p>
+				</td>
+				<td>
+					<p class="tableText">Price : $45</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Dish ID 105</td>
+				<td rowspan="3">
+					<label for="numinput">Number Of Order</label>
+					<input type="number" name="number" value="0" style="width: 3em"/>
+				</td>
+				<td>Dish ID 106</td>
+				<td rowspan="3">
+					<label for="numinput">Number Of Order</label>
+					<input type="number" name="number" value="0" style="width: 3em"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img class="foodImg" src="img/food/food5.jpg" alt="food1">
+					<br/><br/>
+					<p class="tableText">Shrimp noodles with tea</p>
+				<td>
+					<img class="foodImg" src="img/food/food6.jpg" alt="food2">
+					<br/><br/>
+					<p class="tableText">Fried rice with fruit and tea</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="tableText">Price : $30</p>
+				</td>
+				<td>
+					<p class="tableText">Price : $39</p>
+				</td>
+			</tr>
+
+		</table>
+		<br/><br/><br/><br/>
+		<table id="specicaltable">
+			<caption id="caption">Special instruction</caption>
+			<tr>
+				<td>
+					<label for="Special instruction">Please list any special instruction you may have</label>
+					<br/><br/>
+					<textarea rows="5" cols="50 style="center">e.g. No salt, Extra vegatable</textarea>
+				</td>
+			</tr>
+	</table>
+	<div class="button_bottom">
+		<input type="submit" value="Submit" class="submitButton"/>
+		<input type="reset" value="Reset" class="resetButton"/>
+	</div>
+
+	</div>
+
+</div>
+<footer id="footer">
+				<br><br> Copyright © PolyU Speed. All rights reserved.<br>
+				<a href="https://www.speed-polyu.edu.hk/">PolyU Speed | <a href="https://adfs.cpce-polyu.edu.hk/adfs/ls/?SAMLRequest=jZJPU4MwEMW%2FCpM7JECxbaYwg%2B3BzlRlCnrw4gRIJWOaYDao%2FfZC8U976Xjdffve7m92AWwvW5p2tlFb%2FtZxsM7nXiqgx0aMOqOoZiCAKrbnQG1F8%2FR2QwOP0NZoqystkZMCcGOFVkutoNtzk3PzLir%2BsN3EqLG2BYqxYa2oWZ%2Fk9oO112p56Dxed17zivNGlKWW3DYegMZDRICz%2B7xAzqrfSSg2uP95sXoHXtVW3D2zGcpYAkbOehWj56vSn8znO1aRqCZ1RKKwnjJSTUsS8igI570MoONrBZYpG6OA%2BDPXJ24wLfwJDWc0nDwhJ%2Fs%2B81qoWqiXy0zKUQT0pigyd7zgkRs4bt8LULIYyNJjsDlhfdmW%2FQBGyX9wwi%2FOBT6JG7Nbetf7r1eZlqI6OKmU%2BmNpOLM8Rj7CyThy%2FhTJFw%3D%3D&RelayState=cookie%3A1540651114_09e6">MySpeed |
+	        <a href="https://www.instagram.com/polyu_speed/">PolyU Speed Instagram | <a href="https://www.facebook.com/HK.PolyUSPEED/">PolyU Speed Facebook</a>
+
+				<br><br> Developed by PolyU Speed Student - Group A4 (2018-2020)
+				<br/>#Lee Hui Shin, Matthew
+				<br/>#Poon Kin Long, Winco
+				<br/>#Yu Ho Yin, Daniel
+</footer>
+</body>
+</html>

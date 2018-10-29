@@ -1,0 +1,212 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital</title>
+  <link href="css/project.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+        		<nav class="navbar navbar-default navbar-static-top">
+    				<div class="container-fluid">
+    					<div class="navbar-header">
+    						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    							<span class="sr-only">Toggle navigation</span>
+    							<span class="icon-bar"></span>
+    							<span class="icon-bar"></span>
+    							<span class="icon-bar"></span>
+    						</button>
+    						<a class="navbar-brand" href="#">
+    							ADMIN
+    						</a>
+    					</div>
+    					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    						<ul class="nav navbar-nav navbar-right">
+    							<li><a href="http://www.sciax2.it/forum/utenti/-kik_226760/" target="_blank">Return back</a></li>
+    							<li class="dropdown ">
+    								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    									Settings
+    									<span class="caret"></span></a>
+    									<ul class="dropdown-menu" role="menu">
+    										<li class="dropdown-header">SETTINGS</li>
+    										<li class=""><a href="#">Link</a></li>
+    										<li class=""><a href="#">Other Link</a></li>
+    										<li class=""><a href="#">Other Link</a></li>
+    										<li class="divider"></li>
+    										<li><a href="#">Logout</a></li>
+    									</ul>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+    				</nav>
+    				<div class="container-fluid">
+    					<div class="col col-md-3">
+    						<div class="panel-group" id="accordion">
+    						  <div class="panel panel-default">
+    							<div class="panel-heading">
+    							  <h4 class="panel-title">
+    								<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+    								Files</a>
+    							  </h4>
+    							</div>
+    							<div id="collapse1" class="panel-collapse collapse in">
+    								<ul class="list-group">
+    									<li class="list-group-item"><span class="badge">253</span> New</li>
+    									<li class="list-group-item"><span class="badge">17</span> Deleted</li>
+    									<li class="list-group-item"><span class="badge">3</span> Reported</li>
+    								</ul>
+    							</div>
+    						  </div>
+    						  <div class="panel panel-default">
+    							<div class="panel-heading">
+    							  <h4 class="panel-title">
+    								<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+    								Blog</a>
+    							  </h4>
+    							</div>
+    							<div id="collapse2" class="panel-collapse collapse">
+    								<ul class="list-group">
+    									<li class="list-group-item"><span class="badge">12</span> New</li>
+    									<li class="list-group-item"><span class="badge">5</span> Deleted</li>
+    								</ul>
+    							</div>
+    						  </div>
+    							<div class="panel panel-default">
+    							<div class="panel-heading">
+    							  <h4 class="panel-title">
+    								<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+    								Settings</a>
+    							  </h4>
+    							</div>
+    							<div id="collapse3" class="panel-collapse collapse">
+    								<ul class="list-group">
+    									<li class="list-group-item"><span class="badge">1</span> Users Reported</li>
+    									<li class="list-group-item"><span class="badge">5</span> User Waiting Activation</li>
+    								</ul>
+    							</div>
+    						  </div>
+    						</div>
+    					</div>
+    					<div class="col col-md-9">
+                  <div class="tableForm"><!--Food Order-->
+                		<table class="statustable">
+                			<caption id="caption">Service Status</caption>
+                			<tr>
+                				<td><p>Room Number</p></td>
+                				<td width="40%">
+                					<b>Room 101</b>
+                				</td>
+                				<td><p>Name</p></td>
+                				<td width="40%">
+                					<b>Chan Tai Man</b>
+                				</td>
+                			</tr>
+                			<tr>
+                				<td colspan="4">
+                					<h1>Processing Order</h1>
+                					<table class="statustable">
+                						<tr>
+                							<td>Dish ID 101</td>
+                							<td rowspan="2">
+                							<label for="numinput">Number Of Order</label>
+                							<input type="number" name="number" value="0" style="width: 3em"/>
+                						</tr>
+                						<tr>
+                							<td>
+                							<img class="foodImg" src="img/food/food1.jpg" alt="food1">
+                							<br/><br/>
+                							<p class="tableText">Porridge with egg salad and tea</p>
+                							</td>
+                						</tr>
+                						<tr>
+                							<td>
+                							<p class="tableText">Price : $30</p>
+                							</td>
+                							<td>
+                							<p class="tableText">Special instruction : <br/>No Salt</p>
+                							</td>
+                						</tr>
+                						<tr>
+                							<td colspan="2">
+                								<h3>Bill Number - 100739733556</h3>
+                							</td>
+                						</tr>
+                					</table><br/>
+                				</td>
+                			</tr>
+                			<tr>
+                				<td colspan="4">
+                					<h1>Payment</h1>
+                					<table id="payment" class="statustable" width="550px;">
+                						<tr>
+                							<td width="20%">Meal</td>
+                							<td width="30%"><b>$40</b></td>
+                							<td width="20%">19/10/2018</td>
+                							<td width="30%"><b>Bill Number - 100286794728</b></td>
+                						</tr>
+                						<tr>
+                							<td width="20%">Meal</td>
+                							<td width="30%"><b>$28</b></td>
+                							<td width="20%">19/10/2018</td>
+                							<td width="30%"><b>Bill Number - 100386723043</b></td>
+                						</tr>
+                						<tr>
+                							<td width="20%">Meal</td>
+                							<td width="30%"><b>$30</b></td>
+                							<td width="20%">20/10/2018</td>
+                							<td width="30%"><b>Bill Number - 100739733556</b></td>
+                						</tr>
+                						<tr>
+                							<td width="20%">Meal</td>
+                							<td width="30%"><b>$30</b></td>
+                							<td width="20%">20/10/2018</td>
+                							<td width="30%"><b>Bill Number - 100739329522</b></td>
+                						</tr>
+                						<tfoot>
+                							<td colspan="4">Total - $128</td>
+                						</tfoot>
+                					</table>
+                				</td>
+                			</tr>
+                		</table>
+                		<br/><br/><br/><br/>
+                		<table id="specicaltable">
+                			<caption id="caption">Request Modify</caption>
+                			<tr>
+                				<td>
+                				<h5>Please enter the form to request of modify item</h5>
+                				<br/>
+                					<div>
+                					<label for="name">Name</label><br/>
+                					<input type="input" name="name" value="Chan Tai Man" disabled="disabled"/>
+                					</div>
+                					<br/>
+                					<div>
+                					<label for="rmnumber">Room Number</label><br/>
+                					<input type="input" name="room" value="Room 101" disabled="disabled"/>
+                					</div>
+                					<br/>
+                					<div>
+                					<label for="modify">Request Modify Type</label><br/>
+                					<select name="modify">
+                						<option>Number of Order</option>
+                						<option>Special instruction</option>
+                					</select>
+                					<br/><br/>
+                					<textarea rows="2" cols="50" style="center">Modify item</textarea>
+                				</td>
+                			</tr>
+                	</table>
+                	<div class="button_bottom">
+                		<input type="submit" value="Submit" class="submitButton"/>
+                		<input type="reset" value="Reset" class="resetButton"/>
+                	</div>
+                </div>
+    				</div>
+          </div>
+
+    </body>
+    </html>
